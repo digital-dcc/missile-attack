@@ -7,28 +7,22 @@ description: A basic example
 ---
 
 <style>
-  missile-attack p {
-    border: solid 1px blue;
-    padding: 8px;
-  }
+  missile-attack::part(wrapper) {
+		border: solid 1px blue;
+	}
 </style>
-<missile-attack>
-  <p>This is child content</p>
-</missile-attack>
+<missile-attack strength="15" agility="13" weapon="Shortbow"></missile-attack>
 
 <h3>CSS</h3>
 
 ```css
-p {
+missile-attack::part(wrapper) {
   border: solid 1px blue;
-  padding: 8px;
 }
 ```
 
 <h3>HTML</h3>
 
 ```html
-<missile-attack>
-  <p>This is child content</p>
-</missile-attack>
+<missile-attack strength="15" agility="13" weapon="Shortbow"></missile-attack>
 ```

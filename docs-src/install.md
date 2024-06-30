@@ -10,7 +10,7 @@ title: <missile-attack> ⌲ Install
 ## Local Installation
 
 ```bash
-npm i missile-attack
+npm i @digital-dcc/missile-attack
 ```
 
 ## CDN
@@ -22,11 +22,11 @@ For this element to work from unpkg.com specifically, you need to include the `?
 ### HTML
 
 ```html
-<script type="module" src="https://unpkg.com/missile-attack?module"></script>
+<script type="module" src="https://unpkg.com/@digital-dcc/missile-attack?module"></script>
 ```
 
 ### JavaScript
 
 ```html
-import {MyElement} from 'https://unpkg.com/missile-attack?module';
+import {MyElement} from 'https://unpkg.com/@digital-dcc/missile-attack?module';
 ```

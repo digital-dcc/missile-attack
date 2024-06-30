@@ -17,7 +17,7 @@
     
 <header>
   <h1>&lt;missile-attack></h1>
-  <h2>A web component just for me.</h2>
+  <h2>A custom element for Dungeon Crawl Classics missle attacks</h2>
 </header>
     
 <nav>
@@ -29,36 +29,27 @@
     <div id="main-wrapper">
       <main>
         <h1>&lt;missile-attack&gt;</h1>
-<p><code>&lt;missile-attack&gt;</code> is an awesome element. It's a great introduction to building web components with LitElement, with nice documentation site as well.</p>
-<h2>As easy as HTML</h2>
-<section class="columns">
-  <div>
-<p><code>&lt;missile-attack&gt;</code> is just an HTML element. You can it anywhere you can use HTML!</p>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>missile-attack</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>missile-attack</span><span class="token punctuation">></span></span></code></pre>
-  </div>
-  <div>
-<p><missile-attack></missile-attack></p>
-  </div>
-</section>
+<p><code>&lt;missile-attack&gt;</code> is a Dungeon Crawl Classics missile attack calculator. It allows you to set characteristics such as strength, agility and weapon as HTML element attributes
+and be provided with a user interface for rolling a missile weapon attack. Events receive dice roll objects that can be used to roll at attack and damage for the weapon attack.</p>
 <h2>Configure with attributes</h2>
 <section class="columns">
   <div>
 <p><code>&lt;missile-attack&gt;</code> can be configured with attributed in plain HTML.</p>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>missile-attack</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>HTML<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>missile-attack</span><span class="token punctuation">></span></span></code></pre>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>missile-attack</span> <span class="token attr-name">strength</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>12<span class="token punctuation">"</span></span> <span class="token attr-name">agility</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>12<span class="token punctuation">"</span></span> <span class="token attr-name">weapon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Longbow<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>missile-attack</span><span class="token punctuation">></span></span></code></pre>
   </div>
   <div>
-<p><missile-attack name="HTML"></missile-attack></p>
+<p><missile-attack strength="12" agility="12" weapon="Longbow"></missile-attack></p>
   </div>
 </section>
 <h2>Declarative rendering</h2>
 <section class="columns">
   <div>
 <p><code>&lt;missile-attack&gt;</code> can be used with declarative rendering libraries like Angular, React, Vue, and lit-html</p>
-<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>html<span class="token punctuation">,</span> render<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'lit-html'</span><span class="token punctuation">;</span><br><br><span class="token keyword">const</span> name <span class="token operator">=</span> <span class="token string">'lit-html'</span><span class="token punctuation">;</span><br><br><span class="token function">render</span><span class="token punctuation">(</span><br>  html<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string"><br>    &lt;h2>This is a &amp;lt;missile-attack&amp;gt;&lt;/h2><br>    &lt;missile-attack .name=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">>&lt;/missile-attack><br>  </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span><br>  document<span class="token punctuation">.</span>body<br><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>html<span class="token punctuation">,</span> render<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'lit-html'</span><span class="token punctuation">;</span><br><br><span class="token keyword">const</span> strength <span class="token operator">=</span> <span class="token string">'13'</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> agility <span class="token operator">=</span> <span class="token string">'14'</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> weapon <span class="token operator">=</span> <span class="token string">'Dagger'</span><span class="token punctuation">;</span><br><br><span class="token function">render</span><span class="token punctuation">(</span><br>  html<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string"><br>    &lt;h2>This is a &amp;lt;missile-attack&amp;gt;&lt;/h2><br>    &lt;missile-attack .strength=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>strength<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> .agility="</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>agility<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">" .weapon="</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>weapon<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">">&lt;/missile-attack><br>  </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span><br>  document<span class="token punctuation">.</span>body<br><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
   </div>
   <div>
 <h2>This is a &lt;missile-attack&gt;</h2>
-<missile-attack name="lit-html"></missile-attack>
+<missile-attack strength="13" agility="14" weapon="Dagger"></missile-attack>
   </div>
 </section>
 

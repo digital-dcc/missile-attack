@@ -1,7 +1,7 @@
 {
-  "name": "@lit/lit-starter-js",
-  "private": true,
-  "version": "2.0.1",
+  "name": "@digital-dcc/missile-attack",
+  "private": false,
+  "version": "1.0.0",
   "description": "A simple web component",
   "main": "missile-attack.js",
   "module": "missile-attack.js",
@@ -29,6 +29,9 @@
     "test:prod": "MODE=prod wtr",
     "test:prod:watch": "MODE=prod wtr --watch",
     "checksize": "rollup -c ; cat missile-attack.bundled.js | gzip -9 | wc -c ; rm missile-attack.bundled.js"
+  },
+	"publishConfig": {
+    "access": "public"
   },
   "keywords": [
     "web-components",
