@@ -561,7 +561,9 @@ export class MissileAttack extends LitElement {
 
   get _attackDie() {
     // start with the attackDie that may have been passed in as an attribute (or the default)
-    let die = this.attackDie;
+    let [qty, die] = this.attackDie.split('d');
+    die = `d${die}`;
+    qty = qty || '1';
 
     // if the range is long, it's minus 1 die
     if (this.range === 'long') {
@@ -608,7 +610,7 @@ export class MissileAttack extends LitElement {
       }
     }
 
-    return die;
+    return `${qty}${die}`;
   }
 
   get _attackModifier() {
@@ -628,7 +630,7 @@ export class MissileAttack extends LitElement {
   get attackDisplay() {
     const die = this._attackDie;
     const mod = this._attackModifier;
-    return `1${die}${mod ? (mod > 0 ? `+${mod}` : mod) : ''}`;
+    return `${die}${mod ? (mod > 0 ? `+${mod}` : mod) : ''}`;
   }
 
   get _damageDie() {
