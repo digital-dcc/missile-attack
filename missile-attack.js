@@ -301,11 +301,11 @@ export class MissileAttack extends LitElement {
     return html`
       <div class="wrapper" part="wrapper">
         <header part="header">
-          <div class="text" part="text">
+          <div class="text">
             <h1 part="title">Missile</h1>
             <h2 part="subtitle">${this.weapon}</h2>
           </div>
-          <div class="buttons" part="buttons">
+          <div class="buttons">
             <div class="attack" part="attack">
               <div class="dice-chain-adjustment-buttons">
                 <button
