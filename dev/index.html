@@ -3,20 +3,32 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>&lt;my-element> Demo</title>
+    <title>&lt;missile-attack> Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="../node_modules/lit/polyfill-support.js"></script>
-    <script type="module" src="../my-element.js"></script>
+    <script type="module" src="../missile-attack.js"></script>
     <style>
-      p {
-        border: solid 1px blue;
-        padding: 8px;
+      .wrapper {
+        display: grid;
+        gap: 10px;
       }
     </style>
   </head>
   <body>
-    <my-element>
-      <p>This is child content</p>
-    </my-element>
+    <div class="wrapper">
+      <missile-attack strength="5" agility="13" weapon="Blowgun"></missile-attack>
+      <missile-attack strength="13" agility="12" weapon="Crossbow"></missile-attack>
+      <missile-attack strength="18" agility="16" weapon="Dagger"></missile-attack>
+      <missile-attack strength="11" agility="7" weapon="Dart"></missile-attack>
+      <missile-attack strength="7" agility="18" weapon="Handaxe"></missile-attack>
+      <missile-attack strength="14" agility="5" weapon="Javelin"></missile-attack>
+      <missile-attack strength="16" agility="8" weapon="Longbow"></missile-attack>
+      <missile-attack strength="3" agility="11" weapon="Shortbow"></missile-attack>
+      <missile-attack strength="9" agility="12" weapon="Sling"></missile-attack>
+      <missile-attack strength="9" agility="9" weapon="Sling" attack-modifier-adjustment="+2" damage-modifier-adjustment="+2"></missile-attack>
+      <missile-attack strength="7" agility="14" weapon="Sling" attack-modifier-override="+1"></missile-attack>
+      <missile-attack strength="15" agility="6" weapon="Sling" damage-modifier-override="+1"></missile-attack>
+    </div>
   </body>
 </html>
